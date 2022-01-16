@@ -7,6 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinimalAPI", "MinimalAPI\Mi
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UserDB", "UserDB\UserDB.sqlproj", "{9DFE199D-59DD-4177-A3F8-63BF80E94933}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{7DA8FA22-7CDF-415C-813A-6E6521B090C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D5E6F967-6D05-4C1B-97BB-60417DA4566F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +30,10 @@ Global
 		{9DFE199D-59DD-4177-A3F8-63BF80E94933}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DFE199D-59DD-4177-A3F8-63BF80E94933}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9DFE199D-59DD-4177-A3F8-63BF80E94933}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7DA8FA22-7CDF-415C-813A-6E6521B090C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA8FA22-7CDF-415C-813A-6E6521B090C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA8FA22-7CDF-415C-813A-6E6521B090C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA8FA22-7CDF-415C-813A-6E6521B090C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
