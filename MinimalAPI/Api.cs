@@ -7,6 +7,9 @@ public static class Api
     {
         app.MapGet("/Users", GetUsers);
         app.MapGet("/Users/{id}", GetUser);
+        app.MapPost("/Users", InsertUser);
+        app.MapPut("/Users", UpdateUser);
+        app.MapDelete("/Users/{id}", DeleteUser);
     }
 
     private static async Task<IResult> GetUsers(IUserData data)
@@ -34,6 +37,48 @@ public static class Api
 
         }
         catch (Exception ex)
+        {
+
+            return Results.Problem(ex.Message);
+        }
+    }
+
+    private static async Task<IResult> InsertUser(UserModel user, IUserData data)
+    {
+        try
+        {
+            await data.InsertUser(user);
+            return Results.Ok();    
+        }
+        catch (Exception ex)
+        {
+
+            return Results.Problem(ex.Message);
+        }
+    }
+
+    private static async Task<IResult> UpdateUser(UserModel user, IUserData data)
+    {
+        try
+        {
+            await data.UpdateUser(user);
+            return Results.Ok();
+        }
+        catch (Exception ex)
+        {
+
+            return Results.Problem(ex.Message);
+        }
+    }
+
+    private static async Task<IResult> DeleteUser(int id, IUserData data)
+    {
+        try
+        {
+            await data.DeleteUser(id);
+            return Results.Ok();    
+        }
+        catch ( Exception ex)
         {
 
             return Results.Problem(ex.Message);
